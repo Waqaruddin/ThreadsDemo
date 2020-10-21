@@ -18,4 +18,13 @@
         android:text="Music Playing"
         android:textColor="#000"/>
 
+    <TextView
+        android:id="@+id/text_view_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/text_view_app"
+        android:textSize="32dp"
+        android:textColor="#000"/>
+
 </RelativeLayout>
