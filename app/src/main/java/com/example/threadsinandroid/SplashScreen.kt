@@ -1,5 +1,6 @@
 package com.example.threadsinandroid
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
@@ -8,8 +9,10 @@ import android.os.Handler
 import android.provider.MediaStore
 import android.widget.TextView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreen : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
           var handler: Handler
         super.onCreate(savedInstanceState)
@@ -46,8 +49,8 @@ class SplashScreen : AppCompatActivity() {
                     Thread.sleep(1000)
                     counter++
                     handler.post{
-                         var c: TextView = findViewById(R.id.text_view_counter)
-                        c.setText("" + counter)
+
+                        text_view_counter.text = "" + counter
                     }
                     runOnUiThread{
                         Toast.makeText(this , "On Main Thread", Toast.LENGTH_SHORT).show()
